@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 #include "loss.h"
 
@@ -18,5 +18,15 @@ void mean_squared_error_derivative(const double *actual, const double *predicted
     for (size_t i = 0; i < length; i++)
     {
         gradient[i] = -2.0 * (actual[i] - predicted[i]) / length;
+    }
+}
+
+double cross_entropy_loss(const double *actual, const double *predicted, size_t length)
+{
+    double loss = 0;
+
+    for (size_t i = 0; i < length; i++)
+    {
+        loss += -actual[i] * log(predicted[i]) - (1 - actual[i]) * log(1 - predicted[i]);
     }
 }

@@ -30,3 +30,11 @@ double cross_entropy_loss(const double *actual, const double *predicted, size_t 
         loss += -actual[i] * log(predicted[i]) - (1 - actual[i]) * log(1 - predicted[i]);
     }
 }
+
+void cross_entropy_loss_derivative(const double *actual, const double *predicted, double *gradient, size_t length)
+{
+    for (size_t i = 0; i < length; i++)
+    {
+        gradient[i] = -((actual[i] / predicted[i]) - (1.0 - actual[i]) / (1.0 - predicted[i])) / length;
+    }
+}

@@ -13,3 +13,13 @@ double sigmoid_derivative(double x)
 
     return sig * (1.0 - sig);
 }
+
+double relu(double x)
+{
+    return x > 0.0 ? x : 0.0;
+}
+
+double relu_derivative(double x)
+{
+    return x > 0.0 ? 1.0 : 0.0;
+}

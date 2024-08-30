@@ -120,7 +120,7 @@ void print_loaded_csv(double **features, double *labels, size_t num_samples, siz
         printf("%zu\t\t", i + 1);
 
         // Print features
-        for (size_t j = 0; j < num_features; j++)
+        for (size_t j = 0; j < num_features - 1; j++)
         {
             printf("%.2f ", features[i][j]);
         }

@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-#include "loss.h"
+#include "../include/loss.h"
 
 double mean_squared_error(const double *actual, const double *predicted, size_t length)
 {

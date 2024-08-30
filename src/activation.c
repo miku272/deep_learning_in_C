@@ -1,6 +1,6 @@
 #include <math.h>
 
-#include "activation.h"
+#include "../include/activation.h"
 
 double sigmoid(double x)
 {

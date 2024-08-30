@@ -37,7 +37,7 @@ int load_csv(const char *filename, double ***features, double **labels, size_t *
 
     *n_samples = row_count - 1; // Exclude header row
 
-    // Account for one-hot encoding: Assuming 3 unique countries in Geography
+    // Account for one-hot encoding:  3 unique countries in Geography (France, Spain, Germany)
     *n_features = col_count - 3 + 2 - 1; // Exclude RowNumber, CustomerId, Surname; add 2 for Geography, subtract 1 for Exited (label)
 
     // Allocate memory for features and labels

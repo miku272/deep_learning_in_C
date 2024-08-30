@@ -15,7 +15,6 @@ int main()
         print_loaded_csv(features, labels, num_samples, num_features);
     }
 
-    // Remember to free allocated memory after you're done using it
     for (size_t i = 0; i < num_samples; i++)
     {
         free(features[i]);

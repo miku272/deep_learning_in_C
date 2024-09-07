@@ -114,13 +114,18 @@ void print_loaded_csv(double **features, double *labels, size_t num_samples, siz
 {
     size_t samples = 0;
 
-    if (limit < 0) {
+    if (limit < 0)
+    {
         printf("Please enter valid sample limit");
         return;
-    } else if (limit > num_samples) {
+    }
+    else if (limit > num_samples)
+    {
         printf("Sample limit size exceeds total samples");
         return;
-    } else {
+    }
+    else
+    {
         samples = limit;
     }
 
@@ -144,4 +149,11 @@ void print_loaded_csv(double **features, double *labels, size_t num_samples, siz
 
 void free_csv_data(double **features, double *labels, size_t n_samples)
 {
+    for (size_t i = 0; i < n_samples; i++)
+    {
+        free(features[i]);
+    }
+    free(features);
+
+    free(labels);
 }

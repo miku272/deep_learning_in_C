@@ -15,12 +15,7 @@ int main()
         print_loaded_csv(features, labels, num_samples, num_features, 5);
     }
 
-    for (size_t i = 0; i < num_samples; i++)
-    {
-        free(features[i]);
-    }
-    free(features);
-    free(labels);
+    free_csv_data(features, labels, num_samples);
 
     return 0;
 }

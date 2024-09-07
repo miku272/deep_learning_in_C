@@ -26,8 +26,9 @@ int load_csv(const char *filename, double ***features, double **labels, size_t *
  * @param labels A 1D array containing the labels to be printed.
  * @param num_samples The number of samples (rows) in the features array.
  * @param num_features The number of features (columns) in the features array.
+ * @param limit Specifies the number of samples to print.
  */
-void print_loaded_csv(double **features, double *labels, size_t num_samples, size_t num_features);
+void print_loaded_csv(double **features, double *labels, size_t num_samples, size_t num_features, size_t limit);
 
 /**
  * @brief Frees the memory allocated for CSV data.

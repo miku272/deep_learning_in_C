@@ -12,7 +12,7 @@ int main()
 
     if (load_csv("../data/Churn_Modelling.csv", &features, &labels, &num_samples, &num_features) == 0)
     {
-        print_loaded_csv(features, labels, num_samples, num_features);
+        print_loaded_csv(features, labels, num_samples, num_features, 5);
     }
 
     for (size_t i = 0; i < num_samples; i++)

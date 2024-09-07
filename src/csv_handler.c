@@ -38,7 +38,7 @@ int load_csv(const char *filename, double ***features, double **labels, size_t *
     *n_samples = row_count - 1; // Exclude header row
 
     // Account for one-hot encoding:  3 unique countries in Geography (France, Spain, Germany)
-    *n_features = col_count - 3 + 2 - 1; // Exclude RowNumber, CustomerId, Surname; add 2 for Geography, subtract 1 for Exited (label)
+    *n_features = col_count - 4 + 2 - 1; // Exclude RowNumber, CustomerId, Surname, geography; add 2 for Geography(One hot encoding), subtract 1 for Exited (label)
 
     // Allocate memory for features and labels
     *features = (double **)malloc(*n_samples * sizeof(double *));
@@ -110,17 +110,29 @@ int load_csv(const char *filename, double ***features, double **labels, size_t *
     return 0;
 }
 
-void print_loaded_csv(double **features, double *labels, size_t num_samples, size_t num_features)
+void print_loaded_csv(double **features, double *labels, size_t num_samples, size_t num_features, size_t limit)
 {
+    size_t samples = 0;
+
+    if (limit < 0) {
+        printf("Please enter valid sample limit");
+        return;
+    } else if (limit > num_samples) {
+        printf("Sample limit size exceeds total samples");
+        return;
+    } else {
+        samples = limit;
+    }
+
     printf("Sample #\tFeatures\t\t\t\tLabel\n");
     printf("------------------------------------------------------------\n");
 
-    for (size_t i = 0; i < num_samples; i++)
+    for (size_t i = 0; i < samples; i++)
     {
         printf("%zu\t\t", i + 1);
 
         // Print features
-        for (size_t j = 0; j < num_features - 1; j++)
+        for (size_t j = 0; j < num_features; j++)
         {
             printf("%.2f ", features[i][j]);
         }

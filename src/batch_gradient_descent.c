@@ -1,3 +1,4 @@
+// #include "batch_gradient_descent.h"
 #include "../include/batch_gradient_descent.h"
 
 void batch_gradient_descent(double **weights, double *biases, double **dw, double *db, size_t n_features, size_t n_neurons, double learning_rate)

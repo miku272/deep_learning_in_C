@@ -1,6 +1,7 @@
 #include <float.h>
 #include <math.h>
 
+// #include "scaling.h"
 #include "../include/scaling.h"
 
 void min_max_scale(double **features, size_t n_samples, const size_t *scale_columns, size_t n_scale_columns)

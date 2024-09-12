@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// #include "ann.h"
 #include "../include/ann.h"
 
+// #include "matrix.h"
 #include "matrix.c"
 
 Layer *create_layer(size_t n_inputs, size_t n_neurons)
@@ -16,12 +18,12 @@ Layer *create_layer(size_t n_inputs, size_t n_neurons)
     layer->biases = (double *)malloc(n_neurons * sizeof(double));
 
     // Initializing the weight for the first time randomly
-    for (int i = 0; i < n_inputs * n_neurons; i++)
+    for (size_t i = 0; i < n_inputs * n_neurons; i++)
     {
         layer->weights.data[i] = ((double)rand() / RAND_MAX) * 2.0 - 1.0; // Note: If we just use 1.0, the range would be 0.0 to 1.0, not -1.0 to 1.0
     }
 
-    for (int i = 0; i < n_neurons; i++)
+    for (size_t i = 0; i < n_neurons; i++)
     {
         layer->biases[i] = 0.0; // No biases at start
     }

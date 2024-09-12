@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+// #include "csv_handler.h"
 #include "../include/csv_handler.h"
 
 #define MAX_LINE_LENGTH 1024
@@ -114,12 +115,7 @@ void print_loaded_csv(double **features, double *labels, size_t num_samples, siz
 {
     size_t samples = 0;
 
-    if (limit < 0)
-    {
-        printf("Please enter valid sample limit");
-        return;
-    }
-    else if (limit > num_samples)
+    if (limit > num_samples)
     {
         printf("Sample limit size exceeds total samples");
         return;

@@ -1,3 +1,6 @@
+#ifndef LOSS_C
+#define LOSS_C
+
 #include <stdlib.h>
 #include <math.h>
 
@@ -41,3 +44,5 @@ void cross_entropy_loss_derivative(const double *actual, const double *predicted
         gradient[i] = -((actual[i] / predicted[i]) - (1.0 - actual[i]) / (1.0 - predicted[i])) / length;
     }
 }
+
+#endif

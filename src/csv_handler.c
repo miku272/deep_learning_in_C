@@ -1,3 +1,6 @@
+#ifndef CSV_HANDLER_C
+#define CSV_HANDLER_C
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -153,3 +156,5 @@ void free_csv_data(double **features, double *labels, size_t n_samples)
 
     free(labels);
 }
+
+#endif

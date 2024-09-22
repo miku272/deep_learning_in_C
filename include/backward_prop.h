@@ -1,7 +1,7 @@
 #ifndef backward_prop_H
 #define backward_prop_H
 
-#include "ann.h"
+#include "layer.h"
 
 /**
  * @brief Performs the backward propagation algorithm for a neural network.

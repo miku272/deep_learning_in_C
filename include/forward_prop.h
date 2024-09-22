@@ -15,6 +15,6 @@
  * @param n_layers The number of layers in the neural network.
  * @param input_data A Matrix structure containing the input data to the neural network.
  */
-void forward_prop(Layer **layers, size_t n_layers, Matrix input_data);
+Matrix forward_prop(Layer **layers, size_t n_layers, Matrix input_data);
 
 #endif

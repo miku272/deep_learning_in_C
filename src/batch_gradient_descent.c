@@ -1,3 +1,6 @@
+#ifndef BATCH_GRADIENT_DESCENT_C
+#define BATCH_GRADIENT_DESCENT_C
+
 // #include "batch_gradient_descent.h"
 #include "../include/batch_gradient_descent.h"
 
@@ -16,3 +19,5 @@ void batch_gradient_descent(double **weights, double *biases, double **dw, doubl
         biases[i] -= learning_rate * db[i];
     }
 }
+
+#endif

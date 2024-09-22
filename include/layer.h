@@ -28,9 +28,9 @@ typedef struct Layer
  *
  * @param n_inputs Number of inputs to the layer.
  * @param n_neurons Number of neurons in the layer.
- * @return Pointer to the newly created Layer.
+ * @return The newly created Layer.
  */
-Layer *create_layer(size_t n_inputs, size_t n_neurons);
+Layer create_layer(size_t n_inputs, size_t n_neurons);
 
 /**
  * @brief Frees the memory allocated for the layer.

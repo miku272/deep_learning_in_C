@@ -1,3 +1,6 @@
+#ifndef ACTIVATION_C
+#define ACTIVATION_C
+
 #include <math.h>
 
 // #include "activation.h"
@@ -24,3 +27,5 @@ double relu_derivative(double x)
 {
     return x > 0.0 ? 1.0 : 0.0;
 }
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef BACKWARD_PROP_C
+#define BACKWARD_PROP_C
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -24,3 +27,5 @@ void backward_prop(Layer **layers, size_t n_layers, double **inputs, double **ta
         }
     }
 }
+
+#endif

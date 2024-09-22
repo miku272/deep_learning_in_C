@@ -1,3 +1,6 @@
+#ifndef MATRIX_C
+#define MATRIX_C
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -68,7 +71,7 @@ Matrix matrix_multiply(const Matrix *matrix1, const Matrix *matrix2)
 
 void print_matrix(const Matrix *matrix)
 {
-    for (size_t i = 0; i < matrix->rows; i++)
+    for (size_t i = 0; i < 5; i++)
     {
         for (size_t j = 0; j < matrix->cols; j++)
         {
@@ -87,3 +90,5 @@ void free_matrix(Matrix *matrix)
         matrix->data = NULL;
     }
 }
+
+#endif

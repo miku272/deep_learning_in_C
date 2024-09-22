@@ -1,3 +1,6 @@
+#ifndef SCALING_C
+#define SCALING_C
+
 #include <float.h>
 #include <math.h>
 
@@ -80,3 +83,5 @@ void z_score_scale(double **features, size_t n_samples, const size_t *scale_colu
         }
     }
 }
+
+#endif

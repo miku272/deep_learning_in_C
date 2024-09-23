@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "*.embeddedhtml": "html",
-        "matrix.h": "c",
-        "stdio.h": "c",
-        "layer.h": "c",
-        "forward_prop.h": "c"
-    }
-}

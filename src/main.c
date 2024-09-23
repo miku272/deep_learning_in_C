@@ -44,6 +44,8 @@ int main()
         Matrix output_data  = create_matrix(num_samples, 1);
 
         Matrix output = forward_prop(&layers, n_layers, input_data);
+
+        print_matrix(&output);
     }
 
     free_csv_data(features, labels, num_samples);

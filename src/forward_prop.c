@@ -14,10 +14,10 @@ Matrix forward_prop(Layer **layers, size_t n_layers, Matrix input_data)
     for (size_t i = 0; i < n_layers; i++) {
         int is_output_layer = (i == n_layers - 1);
 
-        printf("%d\n", layers[i]->weights.rows);
+        // printf("%d\n", layers[i]->weights.rows);
 
         // Perform forward pass for the current layer
-        current_output = forward_layer(layers[i], current_output, is_output_layer);
+        current_output = forward_layer(*layers + i, current_output, is_output_layer);
     }
 
     return current_output;
